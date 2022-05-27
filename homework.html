@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      box-sizing: border-box;
+      /* 轉場特效 */
+      transition: 1s;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    #container {
+      width: 100%;
+      padding: 1rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    img {
+      width: 35%;
+    }
+
+    /* sass 的圖需要調整 */
+    #container .col:nth-of-type(7) img {
+      width: 30%;
+    }
+
+    #container .col:nth-of-type(7) .cardHead {
+      margin-top: 2rem;
+    }
+
+    /* 水平線 */
+    hr {
+      margin: 1rem 0;
+    }
+
+    /* 泰山職訓局的標題字要粗體 */
+    .colFirst .cardBody h2 {
+      font-weight: bolder;
+    }
+
+    /* 除了泰山職訓局之外的標題和內文要文字靠左 */
+    .col .card .cardBody {
+      text-align: left;
+    }
+
+    /* ----------------------------------------------------------------------------------------- */
+    /* 大尺寸 */
+    @media (min-width: 992px) {
+      /* 滿版 */
+      #container {
+        height: 100%;
+        position: relative;
+      }
+
+      /* 泰山職訓局置中 */
+      .colFirst {
+        width: 50%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      /* 除了泰山職訓局以外, 所有的內文不要出現 */
+      .col .card .cardBody p {
+        display: none;
+      }
+
+      /* 把原本的文字靠左改成置中 */
+      .col .card .cardBody {
+      text-align: center;
+    }
+
+      .col {
+        position: absolute;
+      }
+
+      #container .col:nth-of-type(2) {
+        left: 5%;
+        top: 25%;
+        transform: translate(-50%,-50%);
+      }
+
+      #container .col:nth-of-type(3) {
+        left: 30%;
+        top: 5%;
+        transform: translateX(-50%);
+      }
+
+      #container .col:nth-of-type(4) {
+        left: 15%;
+        top: 60%;
+        transform: translate(-50%,-50%);
+      }
+
+      #container .col:nth-of-type(5) {
+        left: 30%;
+        bottom: 5%;
+        transform: translateX(-50%);
+      }
+
+      #container .col:nth-of-type(6) {
+        left: 75%;
+        top: 5%;
+        transform: translateX(-50%);
+      }
+
+      #container .col:nth-of-type(7) {
+        left: 90%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
+
+      #container .col:nth-of-type(7) img {
+        width: 70%;
+      }
+
+      #container .col:nth-of-type(8) {
+        left: 75%;
+        bottom: 5%;
+        transform: translateX(-50%);
+      }
+
+      #container hr {
+        margin: 0;
+        position: absolute;
+        transform-origin: top left;
+        z-index: 1;
+      }
+
+      #container hr:nth-of-type(1) {
+        width: 5%;
+        top: 30%;
+        left: 40%;
+        transform: rotate(210deg);
+      }
+
+      #container hr:nth-of-type(2) {
+        width: 30%;
+        top: 40%;
+        left: 40%;
+        transform: rotate(190deg);
+      }
+
+      #container hr:nth-of-type(3) {
+        width: 20%;
+        top: 47%;
+        left: 40%;
+        transform: rotate(165deg);
+      }
+
+      #container hr:nth-of-type(4) {
+        width: 10%;
+        top: 55%;
+        left: 42%;
+        transform: rotate(135deg);
+      }
+
+      #container hr:nth-of-type(5) {
+        width: 10%;
+        top: 30%;
+        left: 60%;
+        transform: rotate(-25deg);
+      }
+
+      #container hr:nth-of-type(6) {
+        width: 25%;
+        top: 43%;
+        left: 60%;
+        transform: rotate(6deg);
+      }
+
+      #container hr:nth-of-type(7) {
+        width: 17%;
+        top: 50%;
+        left: 59%;
+        transform: rotate(40deg);
+      }
+
+    }
+
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="colFirst">
+      <div class="card">
+        <div class="cardHead">
+          <img src="https://wdaweb.github.io/index_assets/img/wda.png">
+        </div>
+        <div class="cardBody">
+          <h2><b>泰山職訓局</b></h2>
+          <br>
+          <h2><b>從零開始的網頁設計課程</b></h2>
+          <p>
+            轉職網頁開發人員　掌握就業必備職能<br>
+            由淺入深學習技術　強化職場的競爭力
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <div class="col">
+      <div class="card">
+        <div class="cardHead">
+          <img src="https://wdaweb.github.io/index_assets/img/html.jpg">
+        </div>
+        <div class="cardBody">
+          <h2>Html</h2>
+          <p>
+            超文本標記語言是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+  
+    <div class="col">
+      <div class="card">
+        <div class="cardHead">
+          <img src="https://wdaweb.github.io/index_assets/img/css.jpg">
+        </div>
+        <div class="cardBody">
+          <h2>CSS3</h2>
+          <p>
+            階層式樣式表（英語：Cascading Style Sheets，縮寫：CSS；又稱串樣式列表、級聯樣式表、串接樣式表、階層式樣式表）是一種用來為結構化文件（如HTML文件或XML應用）添加樣式（字型、間距和顏色等）的電腦語言，由W3C定義和維護。CSS3現在已被大部分現代瀏覽器支援，而下一版的CSS4仍在開發中。
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+  
+    <div class="col">
+      <div class="card">
+        <div class="cardHead">
+          <img src="https://wdaweb.github.io/index_assets/img/js.jpg">
+        </div>
+        <div class="cardBody">
+          <h2>JavaScript</h2>
+          <p>
+            JavaScript，通常縮寫為 JS，是⼀種進階直譯語⾔的程式語⾔。JavaScript 是⼀⾨基於原型、函式先⾏的語⾔，是⼀⾨多範式的語⾔，它⽀援物件導向編程，指令式程式設計，以及函式語⾔程式設計。
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+  
+    <div class="col">
+      <div class="card">
+        <div class="cardHead">
+          <img src="https://wdaweb.github.io/index_assets/img/jq.jpg">
+        </div>
+        <div class="cardBody">
+          <h2>jQuery</h2>
+          <p>
+            jQuery 是⼀套跨瀏覽器的 JavaScript 函式庫，簡化 HTML 與 JavaScript 之間的操作。全球前 10,000 個存取最⾼的網站中，有 65% 使⽤了jQuery，是⽬前最受歡迎的 JavaScript 函式庫。
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+  
+    <div class="col">
+      <div class="card">
+        <div class="cardHead">
+          <img src="https://wdaweb.github.io/index_assets/img/bs.jpg">
+        </div>
+        <div class="cardBody">
+          <h2>Bootstrap</h2>
+          <p>
+            Bootstrap 是⼀組⽤於網站和網路應⽤程式開發的開源前端（所謂「前端」，指的是展現給終端使⽤者的介⾯。與之對應的「後端」是在伺服器上⾯執⾏的程式碼）框架，包括 HTML、CSS及JavaScript 的框架，提供字體排印、表單、按鈕、導航及其他各種元件及 Javascript 擴充套件，旨在使動態網⾴和 Web 應⽤的開發更加容易。
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+  
+    <div class="col">
+      <div class="card">
+        <div class="cardHead">
+          <img src="./sass.png">
+        </div>
+        <div class="cardBody">
+          <h2>Sass</h2>
+          <p>
+            Sass是一個最初由Hampton Catlin設計並由Natalie Weizenbaum開發的層疊樣式表語言。在開發最初版本之後，Weizenbaum和Chris Eppstein繼續通過SassScript來繼續擴充Sass的功能。SassScript是一個在Sass檔案中使用的小型手稿語言。
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+  
+    <div class="col">
+      <div class="card">
+        <div class="cardHead">
+          <img src="https://wdaweb.github.io/index_assets/img/vue.jpg">
+        </div>
+        <div class="cardBody">
+          <h2>Vue.js</h2>
+          <p>
+            Vue.js是一個用於建立使用者介面的開源Model–view–viewmodel前端JavaScript框架，也是一個建立單頁應用的Web應用框架。它由尤雨溪建立，由他和其他活躍的核心團隊成員維護。 2016年一項針對JavaScript框架的調查表明，Vue有著89%的開發者滿意度。
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
